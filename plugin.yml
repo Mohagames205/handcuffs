@@ -1,0 +1,18 @@
+name: handboeien
+main: mohagames\handboeien\main
+version: 0.0.1
+api: 3.6.2
+author: Mohagames205
+description: handboeien
+
+commands:
+  handboeien:
+    description: Geeft jou handboeien
+    usage: /handboeien
+    aliases: hh
+    permission: handboeien.use
+
+permissions:
+  handboeien.use:
+    description: Laat de speler mensen arresteren
+    default: op
