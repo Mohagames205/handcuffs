@@ -43,6 +43,7 @@ class main extends PluginBase implements Listener{
             $item = $e->getDamager()->getInventory()->getItemInHand();
             if($item->getId() == ItemIds::LEAD && $item->getCustomName() == "Handboeien"){
                 if(isset($this->arrested[$e->getEntity()->getName()])){
+                    $e->setCancelled();
                     $target->removeEffect(EFFECT::BLINDNESS);
                     $target->removeEffect(EFFECT::SLOWNESS);
                     unset($this->arrested[$target->getName()]);
